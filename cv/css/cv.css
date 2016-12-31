@@ -1,0 +1,214 @@
+
+/*
+ * Initialize
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+hr {
+  height: 0;
+  overflow: visible;
+}
+
+img {
+    border-style: none;
+}
+
+/*
+ * Main style
+ */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #eae8e7;
+  color: #767270;
+  font-family: Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 8px 0;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 16px auto;
+}
+
+.row, .row > .one-third, .row > .two-third {
+  padding: 0 8px;
+}
+
+.row:after, .project-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.one-third, .two-third {
+  float: left;
+  width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+  .one-third {
+    width: 33.33333%;
+  }
+  .two-third {
+    width: 66.66666%;
+  }
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.content-item {
+  padding: 0 16px;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.icon-large {
+  margin-right: 16px;
+  font-size: 32px;
+}
+
+.sidebar {
+  background-color: #5da4d9;
+  color: #ffffff;
+  padding-bottom: 8px;
+}
+
+.sidebar hr {
+  border-top: 1px solid #d4e2ec;
+  margin: 16px 0;
+}
+
+.heading {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-bottom: 1px solid #aacbe4;
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.personal {
+  overflow: hidden;
+}
+
+.progress {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: #4783c2;
+  border-radius: 1px;
+  margin: 0.5rem 0 1rem 0;
+  overflow: visible;
+}
+
+.determinate {
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.progress .determinate .fa {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  font-size: 12px;
+}
+
+.content section {
+  background-color: #ffffff;
+  padding: 0.01em 16px;
+}
+
+.projects, .education {
+  margin-bottom: 16px;
+}
+
+.content h2 {
+  color: #757575;
+  padding: 16px 0px;
+}
+
+.calendar {
+  color: #5da4d9;
+  margin: 8px 0;
+}
+
+.project-row h5 {
+  float: left;
+}
+
+.project-row span {
+  background-color: #5da4d9;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 2px;
+  margin: 8px 4px;
+  float: right;
+  font-size: 14px;
+}

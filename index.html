@@ -1,38 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <title>Parryworld</title>
-  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
   <meta charset="utf-8">
+  <title>Parryworld</title>
 
-  <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Parryworld personal portfolio">
+  <meta name="author" content="parryworld">
+
+  <link rel="icon" href="assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="assets/icons/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
-
-  <div id="fullpage">
-  	<div class="section" id="section0">
-      <h1>Parryworld</h1>
-      <h3>FRONT-END AND MOBILE DEVELOPER</h3>
-      <h5>currently studying in Southeast University and developing React Native Applications.</h5>
+  <header class="cover">
+    <div class="card-container">
+      <div class="card-border">
+        <div class="card-border-2">
+          <div class="card-content">
+              <h2>Hello! I'm Parryworld</h2>
+              <h5>FE Developer | Learner</h5>
+              <h6><i class="fa fa-map-marker fa-fw icon"></i>Southeast University</h6>
+          </div>
+        </div>
+      </div>
     </div>
-  	<div class="section" id="section1">
-      <div class="contact">
-  			<h2>parryworld@gmail.com</h2>
-  		</div>
-  	    <!-- <div class="slide" id="slide1"><h1>Soft graduated colors</h1></div>
-  	    <div class="slide" id="slide2"><h1>Even for each slide if you want</h1></div> -->
-  	</div>
-  	<!-- <div class="section" id="section2">
-  	</div> -->
+  </header>
+
+  <div class="content-container">
+    <section class="portfolio">
+      <h1>作品展示</h1>
+      <hr>
+      <img class="screenshots" src="assets/img/screenshot_dolphinapp.png" alt="dolphinapp" />
+      <p>基于 React Native 和 Redux 开发了 Android 和 iOS 开单类 App</p>
+    </section>
+
+    <section class="blog">
+      <h1>我的博客</h1>
+      <hr>
+      <img class="screenshots" src="assets/img/screenshot_blog.png" alt="blog" />
+      <h5><a href="http://parryworld.me/blog/2016/11/20/redux-introduction-3/" target="_blank">Redux 介绍（三）：中间件 Middleware</a></h5>
+      <h5><a href="http://parryworld.me/blog/2016/11/16/Objective-C-and-Java/" target="_blank">IOS 中 Objective-C 和 Android 中 Java 的语法对应关系</a></h5>
+    </section>
+
+    <section class="cv">
+      <h1>我的简历</h1>
+      <hr>
+      <img class="screenshots" src="assets/img/screenshot_cv.png" alt="cv" />
+    </section>
+
+    <section class="contact">
+      <h5>如果你想进一步了解我或者联系我</h5>
+      <div class="contact-row">
+        <div class="contact-half">
+          <p>邮箱： parryworld@gmail.com</p>
+          <p>博客： parryworld.me/blog</p>
+          <p>简历： parryworld.me/cv</p>
+        </div>
+        <div class="contact-half">
+          <p>Github： github.com/parryworld</p>
+          <p>知乎： zhihu.com/people/parryworld</p>
+          <p>豆瓣： douban.com/people/parryworld</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Copyright &copy 2017 designed by parryworld</p>
+    </footer>
   </div>
+
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,52 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  color: #e5e5e5;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 32px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 28px;
+  color: #e5e5e5;
+}
+
+#section0 {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+}
+
+#section1 {
+  background-color: #d5d5d5;
+}
+
+#section2 {
+  background-color: #d5d5d5;
+}
+
+#section3 {
+  background-image: url("../img/background2.jpg");
+  background-size: cover;
+}
+
+.center {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.image {
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 32px;
+}

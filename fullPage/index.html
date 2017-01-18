@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fullPage</title>
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/fullPage.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="js/fullPage.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#fullpage').fullPage({
+        index: 1,              // 初始化首页
+        easing: 'ease',        // 动画类型
+        animationTime: 1200,   // 动画时长
+        loop: true,            // 无限循环
+        // autoplay: true,        // 自动滚动
+        autoplaySpeed: 3000,   // 自动滚动间隔时长
+        pagination: true,      // 显示导航
+        keyboard: true,        // 键盘方向键滚动
+        direction: 'vertical'  // 滚动方向
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="fullpage">
+    <section class="section" id="section0">
+      <div class="center">
+        <h1>fullPage.js</h1>
+        <h3>基于 jQuery 实现全屏切换效果</h3>
+      </div>
+    </section>
+    <section class="section" id="section1">
+      <div class="center">
+        <h2>fullPage 配置参数</h2>
+        <img class="image" src="img/screenshot_script.png" alt="screenshot_script">
+      </div>
+    </section>
+    <section class="section" id="section2">
+      <div class="center">
+        <h2>fullPage HTML结构</h2>
+        <img class="image" src="img/screenshot_html.png" alt="screenshot_html">
+      </div>
+    </section>
+    <section class="section" id="section3"></section>
+  </div>
+</body>
+</html>

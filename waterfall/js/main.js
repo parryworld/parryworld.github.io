@@ -15,6 +15,16 @@ window.onload = function() {
       getData();
     }
   }
+
+  var closeButton = document.getElementsByClassName('close')[0];
+  closeButton.onclick = function() {
+    var modal = document.getElementById('modal');
+    var pic = modal.getElementsByTagName('img')[0];
+    pic.src = '#';
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    document.body.style.paddingRight = '0px';
+  }
 }
 
 function getData() {
@@ -36,21 +46,35 @@ function addPicture(data) {
     card.className = 'card';
     container.appendChild(card);
     var img = document.createElement('img');
-    img.src = data[i].url.replace('/large/', '/small/');
+    var url = data[i].url;
+    img.setAttribute('data-src', url);
+    if (url.indexOf('clouddn') === -1) {
+      url = url.replace('/large/', '/small/');
+    } else {
+      url = url + '?imageView2/2/w/160';
+    }
+    img.src = url;
     img.alt = 'img';
     img.onload = function() {
       count++;
       if (count % 10 === 0) {
         waterfall();
       }
-    }
+    };
+    img.onclick = function() {
+      var modal = document.getElementById('modal');
+      var pic = modal.getElementsByTagName('img')[0];
+      pic.src = this.getAttribute('data-src');
+      pic.style.display = 'none';
+      pic.onload = function() {
+        this.style.display = 'inline';
+      }
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = '16px';
+      modal.style.display = 'block';
+    };
     card.appendChild(img);
-    cardWidth = card.offsetWidth + margin;
     card.style.display = 'none';
-
-    if (cols === 0) {
-      setContainerWidth();
-    }
   }
 }
 
@@ -74,6 +98,12 @@ function waterfall() {
   for (var i = count - 10; i < count; i++) {
     var card = cards[i];
     card.style.display = 'block';
+
+    if (i === 0) {
+      cardWidth = card.offsetWidth + margin;
+      setContainerWidth();
+    }
+
     if (i < cols) {
       aHeight.push(card.offsetHeight + margin);
       card.style.left = cardWidth * i + 'px';
@@ -93,7 +123,8 @@ function waterfall() {
 }
 
 function needAddPicture() {
-  var scrollHeight = document.body.scrollTop + document.documentElement.clientHeight;
+  var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  var scrollHeight = scrollTop + document.documentElement.clientHeight;
   var minHeight = Math.min.apply(null, aHeight);
   if (scrollHeight + document.documentElement.clientHeight > minHeight) {
     return true;

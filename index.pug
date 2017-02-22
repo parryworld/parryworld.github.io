@@ -28,8 +28,37 @@ html
       section.portfolio
         h1 作品展示
         hr
-        img(class='screenshots', src='assets/img/screenshot_dolphinapp.png', alt='dolphinapp')
-        p 基于 React Native 和 Redux 开发的 Android 和 iOS 开单类 App
+        .project-item
+          img(class='screenshots', src='assets/img/screenshot_dolphinapp.png', alt='dolphinapp')
+          p 基于 React Native 和 Redux 开发的 Android 和 iOS 开单类 App
+
+        .project-item.markdown
+          a(href='http://parryworld.me/react-markdown/', target='_blank')
+            img(class='screenshots', src='assets/img/screenshot_markdown.png', alt="markdown")
+          p 基于 React 开发的 Markdown 在线编辑器
+
+        .project-item
+          h4 Demo
+          .demo-row.clearfix
+            .figure-item
+              a(href='http://parryworld.me/fullPage/', target='_blank')
+                figure
+                  img(src='assets/img/screenshot_fullpage.png', alt='fullPage')
+                  figcaption
+                    h4 fullPage - 全屏幻灯片
+            .figure-item
+              a(href='http://parryworld.me/waterfall/', target='_blank')
+                figure
+                  img(src='assets/img/screenshot_waterfall.png', alt='waterfall')
+                  figcaption
+                    h4 waterfall - 瀑布流
+
+        .project-item
+          h4 npm仓库
+          h5
+            a(href='https://www.npmjs.com/package/diffpass/', target='_blank') node-diffpass - 密码生成器
+          h5
+            a(href='https://www.npmjs.com/package/react-native-appupdate/', target='_blank') react-native-appupdate - App 更新模块
 
       section.blog
         h1 我的博客
@@ -37,15 +66,11 @@ html
         a(href='http://parryworld.me/blog/', target='_blank')
           img(class='screenshots', src='assets/img/screenshot_blog.png', alt='blog')
         h5
+          a(href='http://parryworld.me/blog/2017/01/12/React-Native-ListView-force-render/', target='_blank') React Native ListView 强制刷新
+        h5
           a(href='http://parryworld.me/blog/2016/11/20/redux-introduction-3/', target='_blank') Redux 介绍（三）：中间件 Middleware
         h5
           a(href='http://parryworld.me/blog/2016/11/16/Objective-C-and-Java/', target='_blank') IOS 中 Objective-C 和 Android 中 Java 的语法对应关系
-
-      section.cv
-        h1 我的简历
-        hr
-        a(href='http://parryworld.me/cv/', target='_blank')
-          img(class='screenshots', src='assets/img/screenshot_cv.png', alt='cv')
 
       section.contact
         h5 如果你想进一步了解我或者联系我

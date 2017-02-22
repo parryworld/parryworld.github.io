@@ -181,6 +181,10 @@ a {
   font-size: 12px;
 }
 
+.evalution {
+  padding: 30px 10px 50px 10px;
+}
+
 .content section {
   background-color: #ffffff;
   padding: 0.01em 16px;
@@ -193,16 +197,31 @@ a {
 .content h2 {
   color: #757575;
   padding: 16px 0px;
+  margin-bottom: 0;
+}
+
+.content p {
+  margin: 0;
 }
 
 .calendar {
   color: #5da4d9;
-  margin: 8px 0;
+  padding: 8px 0;
+}
+
+.content-item h6 {
+  color: #5da4d9;
+}
+
+.project-row {
+  margin-top: 8px;
 }
 
 .project-row h5 {
   float: left;
+  color: #5da4d9;
 }
+
 
 .project-row span {
   background-color: #5da4d9;
@@ -212,4 +231,8 @@ a {
   margin: 8px 4px;
   float: right;
   font-size: 14px;
+}
+
+.education .content-item{
+  padding-bottom: 20px;
 }
